@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 7 Brothers Archive</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Patrick Hand', cursive;
+            background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 60px 20px 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            opacity: 0.8;
+        }
+
+        .group-photo {
+            margin: 30px auto;
+            width: 70%;
+            max-width: 400px;
+            border-radius: 20px;
+            border: 5px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .group-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .button-container {
+            margin: 50px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .main-btn {
+            background: #ffcc00;
+            color: black;
+            padding: 15px 35px;
+            border-radius: 40px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            width: 260px;
+        }
+
+        .main-btn:hover {
+            transform: scale(1.08);
+            background: #ffd633;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        
+        h1 {
+    animation: floatTitle 3s ease-in-out infinite;
+}
+
+@keyframes floatTitle {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+body {
+    animation: pageEnter 1s ease-out;
+}
+
+@keyframes pageEnter {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+.main-btn {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: buttonSlide 0.8s forwards;
+}
+
+.main-btn:nth-child(1) { animation-delay: 0.3s; }
+.main-btn:nth-child(2) { animation-delay: 0.5s; }
+.main-btn:nth-child(3) { animation-delay: 0.7s; }
+.main-btn:nth-child(4) { animation-delay: 0.9s; }
+.main-btn:nth-child(5) { animation-delay: 1.1s; }
+.main-btn:nth-child(6) { animation-delay: 1.3s; }
+
+@keyframes buttonSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.group-photo {
+    animation: photoPop 1s ease-out;
+}
+
+@keyframes photoPop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* Fullscreen loader */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at bottom, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    flex-direction: column;
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 3s;
+}
+    </style>
+</head>
+
+<body>
+</div>
+    <audio id="bgMusic" loop>
+        <source src="/Mustafa Mustafa-320kbps.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+        <h1 style="display:flex; justify-content:center; align-items:center; gap:15px;">
+            🏠 The 8 Brothers Archive
+            <button onclick="toggleMusic()" id="musicBtn"
+                style="font-size:14px; padding:5px 10px; border:none; border-radius:15px; background:#ffcc00; cursor:pointer;">
+                ▶
+            </button>
+        </h1>
+    </header>
+
+    <div class="group-photo">
+        <img src="./IMages/group-photo.jpeg" alt="The 7 Brothers">
+    </div>
+
+    <div class="button-container">
+        <a href="legends.html" class="main-btn">👑 Meet The Legends</a>
+        <a href="moments.html" class="main-btn">😂 Historic Flat Moments</a>
+        <a href="rules.html" class="main-btn">📜 The Unwritten Laws</a>
+        <a href="gallery.html" class="main-btn">📸 Memory Gallery</a>
+            <a href="awards.html" class="main-btn">🏆 Roommate Awards </a>
+        <a href="confessions.html" class="main-btn">🕵️ Confession Wall</a>
+    
+
+    </div>
+
+    <footer>
+        “This website will only get funnier as we get older.”
+    </footer>
+    <script>
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+// Restore time + state
+window.addEventListener("load", () => {
+    const isPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (savedTime) music.currentTime = savedTime;
+
+    if (isPlaying === "true") {
+        music.play();
+        btn.innerText = "⏸";
+    }
+});
+
+// Save current playback time
+music.addEventListener("timeupdate", () => {
+    localStorage.setItem("musicTime", music.currentTime);
+});
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        btn.innerText = "⏸";
+        localStorage.setItem("musicPlaying", "true");
+    } else {
+        music.pause();
+        btn.innerText = "▶";
+        localStorage.setItem("musicPlaying", "false");
+    }
+}
+</script>
+
+
+
+</body>
+
+</html>

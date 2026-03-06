@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Historic Flat Moments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Patrick Hand', cursive;
+            background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 2.8rem;
+        }
+
+        .subtitle {
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .moment {
+            border-radius: 15px;
+            padding: 18px 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .moment:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .moment:nth-child(even) {
+            background: rgba(0, 0, 0, 0.18);
+        }
+
+        .moment h2 {
+            margin: 0 0 8px;
+        }
+
+        .moment p {
+            margin: 4px 0;
+            font-size: 1.05rem;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin: 40px 0 60px;
+            padding: 12px 25px;
+            background: #ffcc00;
+            color: black;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            background: #ffd633;
+        }
+    </style>
+
+</head>
+
+<body>
+    <audio id="bgMusic" loop>
+        <source src="/Mustafa Mustafa-320kbps.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <h1>😂 Historic Flat Moments
+        <button onclick="toggleMusic()" id="musicBtn"
+            style="font-size:14px; padding:5px 10px; border:none; border-radius:15px; background:#ffcc00; cursor:pointer;">
+            ▶
+        </button>
+    </h1>
+    <p class="subtitle">A timeline of chaos, brotherhood, and unforgettable memories</p>
+
+    <div style="margin-bottom:30px;">
+       <button onclick="showRandomMemory(); throwConfetti();"
+        style="padding:12px 25px; font-size:1.1rem; border:none; border-radius:25px; background:#ffcc00; font-weight:bold; cursor:pointer;">
+        🎲 Show Random Memory
+</button>
+
+    </div>
+
+    <div id="randomMemory"
+        style="max-width:700px; margin:0 auto 40px; padding:15px 20px; border-radius:15px; background:rgba(0,0,0,0.25); display:none;">
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="moment">
+            <h2>🏠 The Move-In Day</h2>
+            <p><strong>Evidence Level:</strong> Bags everywhere</p>
+            <p>The day legends entered the flat with dreams and zero cleaning plans.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🍜 The First 2AM Maggi Festival</h2>
+            <p><strong>Evidence Level:</strong> Vessels still oily</p>
+            <p>We said “light snack.” The kitchen said “war zone.”</p>
+        </div>
+
+        <div class="moment">
+            <h2>🔥 The Burnt Food Incident</h2>
+            <p><strong>Evidence Level:</strong> Smoke alarm memory</p>
+            <p>Windows opened. Fans on. Everyone claimed innocence.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🧹 The “We Should Clean” Meeting</h2>
+            <p><strong>Evidence Level:</strong> Floor still dusty</p>
+            <p>Meeting lasted 40 minutes. Cleaning lasted 4 minutes.</p>
+        </div>
+
+        <div class="moment">
+            <h2>📺 The “Last Movie” Lie</h2>
+            <p><strong>Evidence Level:</strong> Sunrise witnessed</p>
+            <p>We slept when birds started their morning shift.</p>
+        </div>
+
+        <div class="moment">
+            <h2>💡 The Night Lights Never Went Off</h2>
+            <p><strong>Evidence Level:</strong> Sleep schedule destroyed</p>
+            <p>Someone said “leave it on bro.” Nobody recovered.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🧊 The Legendary Frozen Gravy</h2>
+            <p><strong>Evidence Level:</strong> Archaeological discovery</p>
+            <p>A curry that survived longer than most plans.</p>
+        </div>
+
+        <div class="moment">
+            <h2>⏰ The 5-Minute Theory</h2>
+            <p><strong>Evidence Level:</strong> Time is relative</p>
+            <p>Science still cannot explain Siddiq’s time calculations.</p>
+        </div>
+
+        <div class="moment">
+            <h2>❤️ Midnight Talks Era</h2>
+            <p><strong>Evidence Level:</strong> Emotional damage</p>
+            <p>Deep talks about life… ending with dramatic silence like we solved something.</p>
+
+        </div>
+
+        <div class="moment">
+            <h2>🛒 The Grocery Trip That Became a Snack Trip</h2>
+            <p><strong>Evidence Level:</strong> No vegetables found</p>
+            <p>We went to buy essentials. Came back with chips, biscuits, and regret.</p>
+        </div>
+
+        <div class="moment">
+            <h2>📢 The Loud Phone Call Era</h2>
+            <p><strong>Evidence Level:</strong> Entire flat informed</p>
+            <p>Private calls were never private. We all knew the full story.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🧺 Laundry Mountain Incident</h2>
+            <p><strong>Evidence Level:</strong> Missing clothes still under investigation</p>
+            <p>Clothes formed a pile so big it had its own ecosystem.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🍗 The “I’m Not Hungry” Betrayal</h2>
+            <p><strong>Evidence Level:</strong> Empty food boxes</p>
+            <p>Someone said they weren’t hungry. Ate the most.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🔌 The Charger Theft Case</h2>
+            <p><strong>Evidence Level:</strong> Investigation ongoing</p>
+            <p>Chargers disappeared mysteriously. Trust levels have never recovered.</p>
+
+        </div>
+
+        <div class="moment">
+            <h2>🌙 The Power Cut Ghost Stories Night</h2>
+            <p><strong>Evidence Level:</strong> Fear level 100%</p>
+            <p>Power went off. Stories began. Nobody went to the bathroom alone.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🥶 The Fan vs Blanket War</h2>
+            <p><strong>Evidence Level:</strong> Temperature disagreements</p>
+            <p>One wanted Arctic climate. Another wanted Sahara desert.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🎮 The “Just One Game” Lie</h2>
+            <p><strong>Evidence Level:</strong> Sunrise again</p>
+            <p>We started playing at night. Birds ended the session.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🚿 The Bathroom Queue Crisis</h2>
+            <p><strong>Evidence Level:</strong> Knock knock knock</p>
+            <p>Everyone suddenly needed the bathroom at the same time.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🌐 The Omegle Chaos Night</h2>
+            <p>Once upon a time, we opened Omegle just to “time pass” with strangers.</p>
+            <p>We left with zero dignity, unlimited laughter, and memories we can’t explain.</p>
+        </div>
+
+
+        <div class="moment">
+            <h2>😴 The Accidental Evening Nap</h2>
+            <p><strong>Evidence Level:</strong> Awake at 3AM</p>
+            <p>“Just lying down for 5 minutes” turned into a full system reset.</p>
+        </div>
+
+        <div class="moment">
+            <h2>🧠 The Deep Life Advice Session</h2>
+            <p><strong>Evidence Level:</strong> Nobody followed the advice</p>
+            <p>We solved all life problems at 2AM. Forgot everything by morning.</p>
+        </div>
+
+
+    </div>
+
+    <a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+
+
+    <script>
+        const memories = [
+            "🏠 The Move-In Day – Dreams high, cleaning standards low.",
+            "🍜 The 2AM Maggi Festival – We cooked like we had a restaurant license.",
+            "📶 The Great WiFi War – One download. Seven victims.",
+            "🔥 The Burnt Food Incident – Smoke everywhere, chef missing.",
+            "🧹 The Cleaning Meeting – More talking, less cleaning.",
+            "📺 The Last Episode Lie – Sunrise witnessed by all.",
+            "💡 Lights-On Night – Sleep left the building.",
+            "🧊 The Frozen Gravy Legend – Archaeologists still studying it.",
+            "⏰ The 5-Minute Theory – Time works differently here.",
+            "❤️ Midnight Talks – Big life plans, zero execution.",
+            "🔌 The Great Charger Theft – Trust levels never recovered.",
+            "🛒 Grocery Trip – Vegetables missing, snacks successful.",
+            "🎮 Just One Game – Birds started singing before we stopped.",
+            "🚿 Bathroom Queue Crisis – Timing never matched.",
+            "🌐 The Omegle Humbling Experience – The ‘Next’ button worked overtime."
+        ];
+
+        function showRandomMemory() {
+            const randomIndex = Math.floor(Math.random() * memories.length);
+            const memoryBox = document.getElementById("randomMemory");
+            memoryBox.style.display = "block";
+            memoryBox.innerHTML = memories[randomIndex];
+        }
+
+        // Load saved state
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+// Restore time + state
+window.addEventListener("load", () => {
+    const isPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (savedTime) music.currentTime = savedTime;
+
+    if (isPlaying === "true") {
+        music.play();
+        btn.innerText = "⏸";
+    }
+});
+
+// Save current playback time
+music.addEventListener("timeupdate", () => {
+    localStorage.setItem("musicTime", music.currentTime);
+});
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        btn.innerText = "⏸";
+        localStorage.setItem("musicPlaying", "true");
+    } else {
+        music.pause();
+        btn.innerText = "▶";
+        localStorage.setItem("musicPlaying", "false");
+    }
+}
+
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+function throwConfetti() {
+    confetti({
+        particleCount: 150,
+        spread: 90,
+        origin: { y: 0.6 }
+    });
+}
+</script>
+
+</body>
+
+</html>

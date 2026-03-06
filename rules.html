@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Unwritten Laws</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Patrick Hand', cursive;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 2.8rem;
+        }
+
+        .subtitle {
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .constitution {
+            max-width: 800px;
+            margin: 30px auto 60px;
+            background: #ffffff;
+            color: #222;
+            border-radius: 20px;
+            padding: 30px 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        .constitution h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .law {
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+        }
+
+        .law span {
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 50px;
+            padding: 12px 25px;
+            background: #ffcc00;
+            color: black;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            background: #ffd633;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="bgMusic" loop>
+        <source src="/Mustafa Mustafa-320kbps.mp3" type="audio/mpeg">
+    </audio>
+
+    <h1>📜 The Unwritten Laws
+        <button onclick="toggleMusic()" id="musicBtn"
+            style="font-size:14px; padding:5px 10px; border:none; border-radius:15px; background:#ffcc00; cursor:pointer;">
+            ▶
+        </button>
+    </h1>
+    <p class="subtitle">The official constitution of our legendary flat</p>
+
+    <div class="constitution">
+        <h2>🏠 Flat Brotherhood Constitution</h2>
+
+        <p class="law"><span>Article 1:</span> Whoever orders food must offer “just taste” to everyone. Refusal is
+            illegal.</p>
+        <p class="law"><span>Article 2:</span> “Last episode” legally means at least 3 more episodes.</p>
+        <p class="law"><span>Article 3:</span> If you finish the water bottle and don’t refill it — you are a criminal.
+        </p>
+        <p class="law"><span>Article 4:</span> Stealing chargers is punishable by loud public shaming.</p>
+        <p class="law"><span>Article 5:</span> Saying “I’ll clean tomorrow” is a lie recognized by this house.</p>
+        <p class="law"><span>Article 6:</span> Anyone who cooks is exempt from dishwashing duties for that meal.</p>
+        <p class="law"><span>Article 7:</span> If you wake someone up, you are responsible for their mood all day.</p>
+        <p class="law"><span>Article 8:</span> The person who finishes snacks must act innocent when asked.</p>
+        <p class="law"><span>Article 9:</span> Group decisions are made loudly, emotionally, and without conclusion.</p>
+        <p class="law"><span>Article 10:</span> The WiFi password belongs to the people, not individuals.</p>
+        <p class="law"><span>Article 11:</span> Midnight talks are legally protected and cannot be skipped.</p>
+        <p class="law"><span>Article 12:</span> If one person orders food, suddenly everyone is hungry.</p>
+        <p class="law"><span>Article 13:</span> Gym plans are valid for 24 hours only.</p>
+        <p class="law"><span>Article 14:</span> Saying “5 minutes” means a minimum of 30 minutes.</p>
+        <p class="law"><span>Article 15:</span> Memories made here must be remembered forever.</p>
+        <p class="law"><span>Article 16:</span> If Siddiq says “5 mins”, official flat time converts it to 30 minutes
+            minimum.</p>
+
+        <p class="law"><span>Article 17:</span> If Mihran makes a plan, expect 3 revisions, 2 delays, and one
+            cancellation.</p>
+
+        <p class="law"><span>Article 18:</span> If Rafi says “just 5 minutes more sleep”, do not expect him before noon.
+        </p>
+
+        <p class="law"><span>Article 19:</span> If Mukund says “pathukalam”, nothing will actually be resolved.</p>
+
+        <p class="law"><span>Article 20:</span> If Riyaz says “enaku teriyathu”, investigation is officially closed.</p>
+
+        <p class="law"><span>Article 21:</span> Whoever says “let’s save money” will be the first to order food.</p>
+
+        <p class="law"><span>Article 22:</span> If someone starts cleaning, everyone else must pretend to be busy.</p>
+
+        <p class="law"><span>Article 23:</span> The last person awake must switch off the lights… but never does.</p>
+
+        <p class="law"><span>Article 24:</span> Group photos must be taken even if no one looks ready.</p>
+
+        <p class="law"><span>Article 25:</span> Saying “bro trust me” automatically reduces trust.</p>
+
+        <p class="law"><span>Article 26:</span> No one remembers who started the mess, but everyone blames everyone.</p>
+        <p style="text-align:center; margin-top:30px; font-weight:bold;">
+            ⚖️ These laws are permanent, non-negotiable, and legally useless.
+        </p>
+
+    </div>
+
+    <a href="index.html" class="back-btn">⬅ Back to Home</a>
+   <script>
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+// Restore time + state
+window.addEventListener("load", () => {
+    const isPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (savedTime) music.currentTime = savedTime;
+
+    if (isPlaying === "true") {
+        music.play();
+        btn.innerText = "⏸";
+    }
+});
+
+// Save current playback time
+music.addEventListener("timeupdate", () => {
+    localStorage.setItem("musicTime", music.currentTime);
+});
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        btn.innerText = "⏸";
+        localStorage.setItem("musicPlaying", "true");
+    } else {
+        music.pause();
+        btn.innerText = "▶";
+        localStorage.setItem("musicPlaying", "false");
+    }
+}
+</script>
+
+
+
+</body>
+
+</html>

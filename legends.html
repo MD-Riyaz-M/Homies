@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meet The Legends</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="legend.css">
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
+</head>
+
+<body>
+    <audio id="bgMusic" loop>
+    <source src="/Mustafa Mustafa-320kbps.mp3" type="audio/mpeg">
+</audio>
+
+    <h1>👑 Meet The Legends
+         <button onclick="toggleMusic()" id="musicBtn"
+        style="font-size:14px; padding:5px 10px; border:none; border-radius:15px; background:#ffcc00; cursor:pointer;">
+        ▶
+    </button>
+    </h1>
+    <p class="subtitle">The 8 individuals who turned a normal flat into a historical site</p>
+
+    <div class="grid">
+
+         <!-- Periyavar Riyaz -->
+        <div class="card">
+            <div class="photo" style="background-image: url('./IMages/riyaz.jpeg');"></div>
+            <h2>Periyavar Riyaz</h2>
+            <div class="info">
+                <p><strong>🗣 Famous Line:</strong> "Enaku teriyathu"</p>
+                <p><strong>🍜 Food Skill:</strong> Maggi</p>
+                <p><strong>😴 Sleep Level:</strong> Unknown</p>
+                <p><strong>💥 Legendary Moment:</strong> "Oru 2 mins"</p>
+                <p><strong>⚠ Warning:</strong> Still loading…</p>
+            </div>
+        </div>
+
+        <!-- Kadala Rafi -->
+        <div class="card">
+            <div class="photo" style="background-image: url('./IMages/rafi\ gud.jpeg');"></div>
+            <h2>Kadala Rafi</h2>
+            <div class="info">
+                <p><strong>🗣 Famous Line:</strong> "kulichittu varan"</p>
+                <p><strong>🍜 Food Skill:</strong> All-rounder</p>
+                <p><strong>😴 Sleep Level:</strong> Hibernation Mode</p>
+                <p><strong>💥 Legendary Moment:</strong> Slept through alarm for exam</p>
+                <p><strong>⚠ Warning:</strong> Do not disturb before noon</p>
+            </div>
+        </div>
+
+        <!-- Pakkoda Nishar -->
+        <div class="card">
+            <div class="photo" style="background-image: url('./IMages/nishgud.jpeg');"></div>
+            <h2>Pakkoda Nishar</h2>
+            <div class="info">
+                <p><strong>🗣 Famous Line:</strong> "Who finished the food?"</p>
+                <p><strong>🍳 Food Skill:</strong> Chappathi Master</p>
+                <p><strong>😴 Sleep Level:</strong> Light Sleeper</p>
+                <p><strong>💥 Legendary Moment:</strong> Burned rice somehow</p>
+                <p><strong>⚠ Warning:</strong> Hides snacks</p>
+            </div>
+        </div>
+
+        <!-- Speaker Hadi -->
+        <div class="card">
+            <div class="photo" style="background-image: url('./IMages/hadigud.jpeg');"></div>
+            <h2>Speaker Hadi</h2>
+            <div class="info">
+                <p><strong>🗣 Famous Line:</strong> "Turn on light bro"</p>
+                <p><strong>🍕 Food Skill:</strong> Dining Expert</p>
+                <p><strong>😴 Sleep Level:</strong> Night Owl</p>
+                <p><strong>💥 Legendary Moment:</strong> Slept with lights on</p>
+                <p><strong>⚠ Warning:</strong> Will steal your sleep</p>
+            </div>
+        </div>
+
+        <!-- Item Mukund -->
+        <div class="card">
+            <div class="photo" style="background-image: url('./IMages/muk\ gud.jpeg');"></div>
+            <h2>Sexy Mukund</h2>
+            <div class="info">
+                <p><strong>🗣 Famous Line:</strong> "Pathukalam"</p>
+                <p><strong>🍗 Food Skill:</strong> Kitchen Assistant</p>
+                <p><strong>😴 Sleep Level:</strong> Heavy Sleeper</p>
+                <p><strong>💥 Legendary Moment:</strong> "Pathukalam vidu" situation</p>
+                <p><strong>⚠ Warning:</strong> Alarm never wakes him</p>
+            </div>
+        </div>
+
+        <!-- Sombari Hussam -->
+        <div class="card">
+            <div class="photo" style="background-image: url('./IMages/Hussam.jpeg');"></div>
+            <h2>Sombari Hussam</h2>
+            <div class="info">
+                <p><strong>🗣 Famous Line:</strong> "I’ll clean later"</p>
+                <p><strong>🍔 Food Skill:</strong> Snacks Finisher</p>
+                <p><strong>😴 Sleep Level:</strong> Random Sleeper</p>
+                <p><strong>💥 Legendary Moment:</strong> Stored gravy in freezer for 1 week</p>
+                <p><strong>⚠ Warning:</strong> Keeps food in fridge forever</p>
+            </div>
+        </div>
+
+        <!-- Planner Mihran -->
+        <div class="card">
+            <div class="photo" style="background-image: url('./IMages/mihran.jpeg');"></div>
+            <h2>Planner Mihran</h2>
+            <div class="info">
+                <p><strong>🗣 Famous Line:</strong> "Bhai veliya polam"</p>
+                <p><strong>🍟 Food Skill:</strong> Kitchen Cleaner</p>
+                <p><strong>😴 Sleep Level:</strong> Early Sleeper</p>
+                <p><strong>💥 Legendary Moment:</strong> "Don’t make a Pondy plan again"</p>
+                <p><strong>⚠ Warning:</strong> Plans everything… sometimes too much</p>
+            </div>
+        </div>
+
+        <!-- 5 Mins Siddiq -->
+        <div class="card">
+            <div class="photo" style="background-image: url('./IMages/siddiq\ gud.jpeg');"></div>
+            <h2>5 Mins Siddiq</h2>
+            <div class="info">
+                <p><strong>🗣 Famous Line:</strong> "Bro just 5 minutes"</p>
+                <p><strong>🍲 Food Skill:</strong> Experimental Cooking</p>
+                <p><strong>😴 Sleep Level:</strong> Moderate (unless it's morning)</p>
+                <p><strong>💥 Legendary Moment:</strong> "Intha madhiyam vanthuruvan"</p>
+                <p><strong>⚠ Warning:</strong>Full explanation for everything</p>
+            </div>
+        </div>
+
+       
+    </div>
+
+    <a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+<script>
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+// Restore time + state
+window.addEventListener("load", () => {
+    const isPlaying = localStorage.getItem("musicPlaying");
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (savedTime) music.currentTime = savedTime;
+
+    if (isPlaying === "true") {
+        music.play();
+        btn.innerText = "⏸";
+    }
+});
+
+// Save current playback time
+music.addEventListener("timeupdate", () => {
+    localStorage.setItem("musicTime", music.currentTime);
+});
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        btn.innerText = "⏸";
+        localStorage.setItem("musicPlaying", "true");
+    } else {
+        music.pause();
+        btn.innerText = "▶";
+        localStorage.setItem("musicPlaying", "false");
+    }
+}
+</script>
+
+
+
+</body>
+</html>

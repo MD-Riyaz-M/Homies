@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flat Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Patrick Hand', cursive;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 2.8rem;
+        }
+
+        .subtitle {
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px 40px 60px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .gallery img {
+    width: 100%;
+    height: 220px;          /* same height for all */
+    object-fit: cover;      /* crop nicely without stretching */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 50px;
+            padding: 12px 25px;
+            background: #ffcc00;
+            color: black;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            background: #ffd633;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .popup img {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .popup span {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+        .section-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #ffcc00;
+}
+    </style>
+</head>
+
+<body>
+
+ <h1>📸 Memory Gallery</h1>
+<p class="subtitle">Moments we survived… and some we don’t remember clearly</p>
+
+<h2 class="section-title">👥 Brotherhood Moments</h2>
+<div class="gallery">
+    <img src="./IMages/g1.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/g2.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/g3.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/grp2.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/grp3.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/grp4.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/grp5.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/grp6.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/grp7.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/grp8.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/grp9.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/grp10.jpeg" onclick="openPopup(this.src)">
+</div>
+
+<h2 class="section-title">😜 Individual Legends</h2>
+<div class="gallery">
+    <img src="./IMages/rafi fun.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/nishar fun.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/fu1.jpeg" onclick="openPopup(this.src)">
+    <img src="./IMages/inf1.jpeg" onclick="openPopup(this.src)">
+     <img src="./IMages/inf2.jpeg" onclick="openPopup(this.src)">
+      <img src="./IMages/inf3.jpeg" onclick="openPopup(this.src)">
+       <img src="./IMages/inf4.jpeg" onclick="openPopup(this.src)">
+        <img src="./IMages/inf5.jpeg" onclick="openPopup(this.src)">
+         <img src="./IMages/inf6.jpeg" onclick="openPopup(this.src)">
+          <img src="./IMages/inf7.jpeg" onclick="openPopup(this.src)">
+           <img src="./IMages/inf8.jpeg" onclick="openPopup(this.src)">
+            <img src="./IMages/inf9.jpeg" onclick="openPopup(this.src)">
+</div>
+
+    <a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+    <!-- Popup Viewer -->
+    <div id="imgPopup" class="popup">
+        <span onclick="closePopup()">&times;</span>
+        <img id="popupImg">
+    </div>
+
+    <script>
+        function openPopup(src) {
+            document.getElementById("imgPopup").style.display = "block";
+            document.getElementById("popupImg").src = src;
+        }
+
+        function closePopup() {
+            document.getElementById("imgPopup").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

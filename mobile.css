@@ -1,0 +1,104 @@
+/* Mobile layout adjustments */
+
+body{
+    padding:10px;
+}
+
+/* Title size */
+h1{
+    font-size:1.8rem;
+}
+
+/* Buttons stack better */
+.button-container{
+    flex-direction:column;
+    gap:12px;
+}
+
+/* Main buttons */
+.main-btn{
+    width:100%;
+    font-size:1rem;
+    padding:12px;
+}
+
+/* Gallery grid */
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+/* Gallery images */
+.gallery img{
+    height:140px;
+}
+
+/* Moment cards */
+.moment{
+    padding:15px;
+    font-size:0.95rem;
+}
+
+/* Award cards */
+.award-card{
+    padding:15px;
+}
+
+/* Popup image */
+.popup img{
+    max-width:95%;
+    max-height:70%;
+}
+
+/* Moon smaller */
+.moon{
+    width:70px;
+    height:70px;
+    top:20px;
+    right:20px;
+}
+
+/* Shooting star speed adjustment */
+.shooting-star{
+    transform:scale(0.7);
+}
+/* Remove big side spacing */
+body{
+    margin:0;
+    padding:10px;
+}
+
+/* Make main container full width */
+.container{
+    width:100%;
+    max-width:100%;
+    padding:10px;
+}
+
+/* Title size adjustment */
+h1{
+    font-size:1.8rem;
+    text-align:center;
+}
+
+/* Group photo responsive */
+.group-photo img{
+    width:100%;
+    height:auto;
+    border-radius:15px;
+}
+
+/* Buttons full width */
+.main-btn{
+    display:block;
+    width:100%;
+    padding:14px;
+    font-size:1rem;
+    margin:8px 0;
+}
+
+/* Reduce button container gap */
+.button-container{
+    width:100%;
+    padding:0;
+}
